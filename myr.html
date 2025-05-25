@@ -383,7 +383,9 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#class-weight-balanced">‘class_weight=balanced’</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lime">Lime</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modelo-original">Modelo original</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#verificacion-de-no-sobreajuste">Verificación de no sobreajuste</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#curvas-roc-faltantes">Curvas ROC faltantes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#curvas-roc-bosque-aleatorio">Curvas ROC Bosque Aleatorio</a></li>
 </ul>
             </nav>
         </div>
@@ -514,20 +516,6 @@ Matriz de confusión para KNN:
 </div>
 <img alt="_images/ecd1eb4ef325017eaf8d6331fbc864af993ab2a795cbc4aab09634d953dc59d7.png" src="_images/ecd1eb4ef325017eaf8d6331fbc864af993ab2a795cbc4aab09634d953dc59d7.png" />
 <img alt="_images/394ea79d757631479c24e9c12742ebf60290321fcc28a30daecbf8f8e9875f70.png" src="_images/394ea79d757631479c24e9c12742ebf60290321fcc28a30daecbf8f8e9875f70.png" />
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
-</pre></div>
-</div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Reporte de Clasificación:
               precision    recall  f1-score   support
 
@@ -554,20 +542,6 @@ Matriz de confusión para Naive Bayes:
 </div>
 <img alt="_images/5c4f31fdabd33f43e69fa5fa13394c3b476ea2d8e194bea8798c9b4c1a7031b8.png" src="_images/5c4f31fdabd33f43e69fa5fa13394c3b476ea2d8e194bea8798c9b4c1a7031b8.png" />
 <img alt="_images/b2fa53c2fb572e7c816e667d29848f7d7e3bd43b9ac6a9f01afd41fb20df32ac.png" src="_images/b2fa53c2fb572e7c816e667d29848f7d7e3bd43b9ac6a9f01afd41fb20df32ac.png" />
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
-</pre></div>
-</div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Reporte de Clasificación:
               precision    recall  f1-score   support
 
@@ -594,20 +568,6 @@ Matriz de confusión para Regresión Logística:
 </div>
 <img alt="_images/6d3cea28a05149da931a0c249ce9639420e1cb234acfd844d8ea9e6bc01d6bcc.png" src="_images/6d3cea28a05149da931a0c249ce9639420e1cb234acfd844d8ea9e6bc01d6bcc.png" />
 <img alt="_images/f7f22dc03d5da33c7c3002b158a706aff0b9329cbb7fc976e3dd1ccd93354065.png" src="_images/f7f22dc03d5da33c7c3002b158a706aff0b9329cbb7fc976e3dd1ccd93354065.png" />
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
-</pre></div>
-</div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Reporte de Clasificación:
               precision    recall  f1-score   support
 
@@ -634,20 +594,6 @@ Matriz de confusión para Ridge:
 </div>
 <img alt="_images/42535c9b16068cbc9f1c3ac8a6d01df379197aa4ea9b2d8ef66d56595a4b7b75.png" src="_images/42535c9b16068cbc9f1c3ac8a6d01df379197aa4ea9b2d8ef66d56595a4b7b75.png" />
 <img alt="_images/2e30a0f99e90ca8d4974908a6926dd0403b96e2ccc06c91aa8fb5127429a640b.png" src="_images/2e30a0f99e90ca8d4974908a6926dd0403b96e2ccc06c91aa8fb5127429a640b.png" />
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
-</pre></div>
-</div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Reporte de Clasificación:
               precision    recall  f1-score   support
 
@@ -674,20 +620,6 @@ Matriz de confusión para Lasso:
 </div>
 <img alt="_images/23efb91e3cbec6cc6c073f4b50dbc6c2b8d224ae926eb9cff0457f4e51d6820a.png" src="_images/23efb91e3cbec6cc6c073f4b50dbc6c2b8d224ae926eb9cff0457f4e51d6820a.png" />
 <img alt="_images/677f0d102919109747eb048b33152b09b33ffaf1ef97d458c99d875d9ca634ff.png" src="_images/677f0d102919109747eb048b33152b09b33ffaf1ef97d458c99d875d9ca634ff.png" />
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
-</pre></div>
-</div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Reporte de Clasificación:
               precision    recall  f1-score   support
 
@@ -714,20 +646,6 @@ Matriz de confusión para Árbol de Decisión:
 </div>
 <img alt="_images/8126f99b740540d5a9b07fc2da030ce13b96363b735a78b4429248f86c9ce3a5.png" src="_images/8126f99b740540d5a9b07fc2da030ce13b96363b735a78b4429248f86c9ce3a5.png" />
 <img alt="_images/c46d56b75aa9da41ae2a4c5753b1d46f17ce06b571126fcab8af3bfee8f6cf1b.png" src="_images/c46d56b75aa9da41ae2a4c5753b1d46f17ce06b571126fcab8af3bfee8f6cf1b.png" />
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
-</pre></div>
-</div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Reporte de Clasificación:
               precision    recall  f1-score   support
 
@@ -754,20 +672,6 @@ Matriz de confusión para Random Forest:
 </div>
 <img alt="_images/c9ecdfcf0a76df6afc439b663b55d8aad688268820d8ba180560ceea464c8a34.png" src="_images/c9ecdfcf0a76df6afc439b663b55d8aad688268820d8ba180560ceea464c8a34.png" />
 <img alt="_images/5609953ee9c4d2b951408fff0311871762f0da3796f77906acdef3e5bc56d4d4.png" src="_images/5609953ee9c4d2b951408fff0311871762f0da3796f77906acdef3e5bc56d4d4.png" />
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
-</pre></div>
-</div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Reporte de Clasificación:
               precision    recall  f1-score   support
 
@@ -823,20 +727,6 @@ Tabla de Métricas:
 5    Árbol de Decisión   0.274581  0.300806  0.661935  0.286277  0.621
 6        Random Forest   0.467856  0.205529  0.769972  0.227073  0.891
 7              XGBoost   0.610626  0.295664  0.773451  0.310371  0.824
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
 </pre></div>
 </div>
 </div>
@@ -940,12 +830,6 @@ c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\base.py:486: UserWarning: X has feature names, but SVC was fitted without feature names
-  warnings.warn(
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\base.py:486: UserWarning: X has feature names, but SVC was fitted without feature names
-  warnings.warn(
-</pre></div>
-</div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SVM:  → AUC en test set = 0.8350
 Tiempo de cómputo: 9068.4644 segundos
 Matriz de confusión para SVM:
@@ -970,20 +854,6 @@ Matriz de confusión para SVM:
     accuracy                           0.58     25010
    macro avg       0.11      0.12      0.11     25010
 weighted avg       0.53      0.58      0.54     25010
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
 </pre></div>
 </div>
 </div>
@@ -1129,20 +999,6 @@ Matriz de confusión para KNN:
 </div>
 <img alt="_images/de371b991e9f69c1f40405ea83a8cee6ca972d58ebe14b96c060c734cc31b4d2.png" src="_images/de371b991e9f69c1f40405ea83a8cee6ca972d58ebe14b96c060c734cc31b4d2.png" />
 <img alt="_images/c384ac38688f59a57b4f0926cbd2278ca2e9e39c9ceb2b49ff5d3f62835d240e.png" src="_images/c384ac38688f59a57b4f0926cbd2278ca2e9e39c9ceb2b49ff5d3f62835d240e.png" />
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
-</pre></div>
-</div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Reporte de Clasificación:
               precision    recall  f1-score   support
 
@@ -1172,20 +1028,6 @@ Matriz de confusión para Naive Bayes:
 </div>
 <img alt="_images/29934ed9e51f50ad9af039843a7d3cfcfe6711ec31b57bcffdac4eb58c0e1728.png" src="_images/29934ed9e51f50ad9af039843a7d3cfcfe6711ec31b57bcffdac4eb58c0e1728.png" />
 <img alt="_images/fac58bf29ce308d5bace4d286967e4ad74ffce4cd72d93fa3ae3be089edda7e4.png" src="_images/fac58bf29ce308d5bace4d286967e4ad74ffce4cd72d93fa3ae3be089edda7e4.png" />
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
-</pre></div>
-</div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Reporte de Clasificación:
               precision    recall  f1-score   support
 
@@ -1206,25 +1048,6 @@ weighted avg       0.25      0.50      0.33     25010
 
 
 Regresión Logística:
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\linear_model\_logistic.py:1208: UserWarning: Setting penalty=None will ignore the C and l1_ratio parameters
-  warnings.warn(
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\linear_model\_logistic.py:1208: UserWarning: Setting penalty=None will ignore the C and l1_ratio parameters
-  warnings.warn(
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\linear_model\_logistic.py:1208: UserWarning: Setting penalty=None will ignore the C and l1_ratio parameters
-  warnings.warn(
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\linear_model\_logistic.py:1208: UserWarning: Setting penalty=None will ignore the C and l1_ratio parameters
-  warnings.warn(
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\linear_model\_logistic.py:1208: UserWarning: Setting penalty=None will ignore the C and l1_ratio parameters
-  warnings.warn(
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\linear_model\_logistic.py:1208: UserWarning: Setting penalty=None will ignore the C and l1_ratio parameters
-  warnings.warn(
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\linear_model\_logistic.py:1208: UserWarning: Setting penalty=None will ignore the C and l1_ratio parameters
-  warnings.warn(
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>→ Mejor AUC en validación: 0.5299
 → Mejor hiperparámetro: {&#39;clasificador__C&#39;: 0.1}
 Tiempo de cómputo: 440.0164 segundos
 → AUC en test set: 0.4887
@@ -1233,20 +1056,6 @@ Matriz de confusión para Regresión Logística:
 </div>
 <img alt="_images/1763baa6d36798848053ef38fd90fc458a6cf51b7613944ae308d24da4fed44c.png" src="_images/1763baa6d36798848053ef38fd90fc458a6cf51b7613944ae308d24da4fed44c.png" />
 <img alt="_images/5915ababb23105af76d589faf79064cad29182103cb8ad18fb28c6719a601960.png" src="_images/5915ababb23105af76d589faf79064cad29182103cb8ad18fb28c6719a601960.png" />
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
-</pre></div>
-</div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Reporte de Clasificación:
               precision    recall  f1-score   support
 
@@ -1276,20 +1085,6 @@ Matriz de confusión para Ridge:
 </div>
 <img alt="_images/cef61ae85b62cf586003904600f6cf25e934a735f56befb8e94e1a13baee6c67.png" src="_images/cef61ae85b62cf586003904600f6cf25e934a735f56befb8e94e1a13baee6c67.png" />
 <img alt="_images/70e88b8094d0ac78f563bf8420f2ec963a112f464230a40bbe8ba56abc39e95c.png" src="_images/70e88b8094d0ac78f563bf8420f2ec963a112f464230a40bbe8ba56abc39e95c.png" />
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
-</pre></div>
-</div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Reporte de Clasificación:
               precision    recall  f1-score   support
 
@@ -1310,19 +1105,6 @@ weighted avg       0.25      0.50      0.33     25010
 
 
 Lasso:
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\svm\_base.py:1235: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
-  warnings.warn(
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\svm\_base.py:1235: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
-  warnings.warn(
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\svm\_base.py:1235: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
-  warnings.warn(
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\svm\_base.py:1235: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
-  warnings.warn(
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>→ Mejor AUC en validación: 0.5315
 → Mejor hiperparámetro: {&#39;clasificador__C&#39;: 1}
 Tiempo de cómputo: 1944.9303 segundos
 → AUC en test set: 0.4895
@@ -1331,20 +1113,6 @@ Matriz de confusión para Lasso:
 </div>
 <img alt="_images/6e1d3317d1a2914f39a024585033990ebf2dba081b68dce139373a3f27c1f26e.png" src="_images/6e1d3317d1a2914f39a024585033990ebf2dba081b68dce139373a3f27c1f26e.png" />
 <img alt="_images/7d5f44c02d6b1d1c172c55cbf0ab41ee89404cd8a4a33c27e1103b55d209b4d5.png" src="_images/7d5f44c02d6b1d1c172c55cbf0ab41ee89404cd8a4a33c27e1103b55d209b4d5.png" />
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
-</pre></div>
-</div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Reporte de Clasificación:
               precision    recall  f1-score   support
 
@@ -1403,20 +1171,6 @@ Matriz de confusión para Random Forest:
 </div>
 <img alt="_images/8dccad44a2d707183da49b58c8012faee7139d6b6a0aff5dd73f93ce5a1ac21c.png" src="_images/8dccad44a2d707183da49b58c8012faee7139d6b6a0aff5dd73f93ce5a1ac21c.png" />
 <img alt="_images/a11ca14f082eeb4959bf54d6b1841df41cea36f710688aaeed77e7217cbaf6b6.png" src="_images/a11ca14f082eeb4959bf54d6b1841df41cea36f710688aaeed77e7217cbaf6b6.png" />
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
-</pre></div>
-</div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Reporte de Clasificación:
               precision    recall  f1-score   support
 
@@ -1446,20 +1200,6 @@ Matriz de confusión para XGBoost:
 </div>
 <img alt="_images/1199b69399762799392eeec628875382c11488974745f4ecae7332d1d2ef6d45.png" src="_images/1199b69399762799392eeec628875382c11488974745f4ecae7332d1d2ef6d45.png" />
 <img alt="_images/37da75b7d3b7fd95979c07b910eda551e710b19376aae16528d0e0fd55a89187.png" src="_images/37da75b7d3b7fd95979c07b910eda551e710b19376aae16528d0e0fd55a89187.png" />
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
-</pre></div>
-</div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Reporte de Clasificación:
               precision    recall  f1-score   support
 
@@ -1644,20 +1384,6 @@ Matriz de confusión para KNN:
 </div>
 <img alt="_images/6d883fc9a2eb1c3c6420cbc9e89eb17b2af74f81cd5a8701a208ae859dd4fbcb.png" src="_images/6d883fc9a2eb1c3c6420cbc9e89eb17b2af74f81cd5a8701a208ae859dd4fbcb.png" />
 <img alt="_images/8b9ce208044275c0937e50296aff90e045ce749bad11e3ed16bfdb1a45b2bfb2.png" src="_images/8b9ce208044275c0937e50296aff90e045ce749bad11e3ed16bfdb1a45b2bfb2.png" />
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
-</pre></div>
-</div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Reporte de Clasificación:
               precision    recall  f1-score   support
 
@@ -1687,20 +1413,6 @@ Matriz de confusión para Naive Bayes:
 </div>
 <img alt="_images/78586b577627a50f93ff36a4cdb8efedab76e6cea1fa1fd695dda3d1fa51c323.png" src="_images/78586b577627a50f93ff36a4cdb8efedab76e6cea1fa1fd695dda3d1fa51c323.png" />
 <img alt="_images/9ea83edbc119fe31ea2842fe30dc6cf7782150a41b8bf419792f78e539ca3188.png" src="_images/9ea83edbc119fe31ea2842fe30dc6cf7782150a41b8bf419792f78e539ca3188.png" />
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
-</pre></div>
-</div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Reporte de Clasificación:
               precision    recall  f1-score   support
 
@@ -1721,25 +1433,6 @@ weighted avg       0.25      0.34      0.29     25010
 
 
 Regresión Logística:
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\linear_model\_logistic.py:1208: UserWarning: Setting penalty=None will ignore the C and l1_ratio parameters
-  warnings.warn(
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\linear_model\_logistic.py:1208: UserWarning: Setting penalty=None will ignore the C and l1_ratio parameters
-  warnings.warn(
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\linear_model\_logistic.py:1208: UserWarning: Setting penalty=None will ignore the C and l1_ratio parameters
-  warnings.warn(
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\linear_model\_logistic.py:1208: UserWarning: Setting penalty=None will ignore the C and l1_ratio parameters
-  warnings.warn(
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\linear_model\_logistic.py:1208: UserWarning: Setting penalty=None will ignore the C and l1_ratio parameters
-  warnings.warn(
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\linear_model\_logistic.py:1208: UserWarning: Setting penalty=None will ignore the C and l1_ratio parameters
-  warnings.warn(
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\linear_model\_logistic.py:1208: UserWarning: Setting penalty=None will ignore the C and l1_ratio parameters
-  warnings.warn(
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>→ Mejor AUC en validación: 0.5101
 → Mejor hiperparámetro: {&#39;clasificador__C&#39;: 0.1}
 Tiempo de cómputo: 870.9401 segundos
 → AUC en test set: 0.4909
@@ -1748,20 +1441,6 @@ Matriz de confusión para Regresión Logística:
 </div>
 <img alt="_images/f7f379b59afbe53f28961b14e451249f4eb2084575d5b5dcfc7178531e81e4da.png" src="_images/f7f379b59afbe53f28961b14e451249f4eb2084575d5b5dcfc7178531e81e4da.png" />
 <img alt="_images/a5651ea6ee3e06706872d15c795df1ee12e904979034837d805564e569d6e2d8.png" src="_images/a5651ea6ee3e06706872d15c795df1ee12e904979034837d805564e569d6e2d8.png" />
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
-</pre></div>
-</div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Reporte de Clasificación:
               precision    recall  f1-score   support
 
@@ -1791,20 +1470,6 @@ Matriz de confusión para Ridge:
 </div>
 <img alt="_images/25517ec18043fa1814cf3a623a76aade39106bf989698c28be3aa15d23088ade.png" src="_images/25517ec18043fa1814cf3a623a76aade39106bf989698c28be3aa15d23088ade.png" />
 <img alt="_images/289ce516af61416f054ed59add162628c3604eff5a3d8cd47e54300347e99676.png" src="_images/289ce516af61416f054ed59add162628c3604eff5a3d8cd47e54300347e99676.png" />
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
-</pre></div>
-</div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Reporte de Clasificación:
               precision    recall  f1-score   support
 
@@ -1834,20 +1499,6 @@ Matriz de confusión para Lasso:
 </div>
 <img alt="_images/276a3701b2f99584590a23544447a8b49c8d6ee003c5fc5124becd39de35ac7a.png" src="_images/276a3701b2f99584590a23544447a8b49c8d6ee003c5fc5124becd39de35ac7a.png" />
 <img alt="_images/942f513305fe22c3c1293213ea2caf0f214a5e03279594b7d0e7623b485a6e8b.png" src="_images/942f513305fe22c3c1293213ea2caf0f214a5e03279594b7d0e7623b485a6e8b.png" />
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
-</pre></div>
-</div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Reporte de Clasificación:
               precision    recall  f1-score   support
 
@@ -1877,20 +1528,6 @@ Matriz de confusión para Árbol de Decisión:
 </div>
 <img alt="_images/1572ad0ed0b1e58a3527e956793c65e21a0b889b72f4b96a56598aab158fa559.png" src="_images/1572ad0ed0b1e58a3527e956793c65e21a0b889b72f4b96a56598aab158fa559.png" />
 <img alt="_images/8b6b9e6c2a1a1a5ae7f7d4e308e0e02913f68ed352adf413c55a80681217abe2.png" src="_images/8b6b9e6c2a1a1a5ae7f7d4e308e0e02913f68ed352adf413c55a80681217abe2.png" />
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
-</pre></div>
-</div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Reporte de Clasificación:
               precision    recall  f1-score   support
 
@@ -1920,20 +1557,6 @@ Matriz de confusión para Random Forest:
 </div>
 <img alt="_images/d9c7dde8792ef5dd53b7836b211788a825ae2d9e68f1b285f22ef056aec6d039.png" src="_images/d9c7dde8792ef5dd53b7836b211788a825ae2d9e68f1b285f22ef056aec6d039.png" />
 <img alt="_images/a46495dd15ed4559bb07db485aebe72220b2e0d5479262a976bb523066e43361.png" src="_images/a46495dd15ed4559bb07db485aebe72220b2e0d5479262a976bb523066e43361.png" />
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
-</pre></div>
-</div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Reporte de Clasificación:
               precision    recall  f1-score   support
 
@@ -2002,20 +1625,6 @@ Tabla de Métricas:
 5  0.735495  
 6  0.891757  
 7  0.904836  
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
 </pre></div>
 </div>
 </div>
@@ -2147,25 +1756,6 @@ c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Regresión Logística:
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\linear_model\_logistic.py:1208: UserWarning: Setting penalty=None will ignore the C and l1_ratio parameters
-  warnings.warn(
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\linear_model\_logistic.py:1208: UserWarning: Setting penalty=None will ignore the C and l1_ratio parameters
-  warnings.warn(
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\linear_model\_logistic.py:1208: UserWarning: Setting penalty=None will ignore the C and l1_ratio parameters
-  warnings.warn(
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\linear_model\_logistic.py:1208: UserWarning: Setting penalty=None will ignore the C and l1_ratio parameters
-  warnings.warn(
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\linear_model\_logistic.py:1208: UserWarning: Setting penalty=None will ignore the C and l1_ratio parameters
-  warnings.warn(
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\linear_model\_logistic.py:1208: UserWarning: Setting penalty=None will ignore the C and l1_ratio parameters
-  warnings.warn(
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\linear_model\_logistic.py:1208: UserWarning: Setting penalty=None will ignore the C and l1_ratio parameters
-  warnings.warn(
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>→ Mejor AUC en validación: 0.5296
 → Mejor hiperparámetro: {&#39;clasificador__C&#39;: 0.1}
 Tiempo de cómputo: 337.6396 segundos
 → AUC en test set: 0.4925
@@ -2223,31 +1813,6 @@ weighted avg       0.52      0.01      0.02     25010
 
 
 Lasso:
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\svm\_base.py:1235: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
-  warnings.warn(
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\svm\_base.py:1235: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
-  warnings.warn(
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\svm\_base.py:1235: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
-  warnings.warn(
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\svm\_base.py:1235: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
-  warnings.warn(
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\svm\_base.py:1235: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
-  warnings.warn(
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\svm\_base.py:1235: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
-  warnings.warn(
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\svm\_base.py:1235: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
-  warnings.warn(
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\svm\_base.py:1235: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
-  warnings.warn(
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\svm\_base.py:1235: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
-  warnings.warn(
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\svm\_base.py:1235: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
-  warnings.warn(
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>→ Mejor AUC en validación: 0.5217
 → Mejor hiperparámetro: {&#39;clasificador__C&#39;: 10}
 Tiempo de cómputo: 2080.4401 segundos
 → AUC en test set: 0.4976
@@ -2256,20 +1821,6 @@ Matriz de confusión para Lasso:
 </div>
 <img alt="_images/e3e372d44456ddeace619c353edf7b63e0f8ed9de5867bd517799123b50300c3.png" src="_images/e3e372d44456ddeace619c353edf7b63e0f8ed9de5867bd517799123b50300c3.png" />
 <img alt="_images/22654880318f3a7390c181134f7d2a779d73f8f5701040c42673e62160740c06.png" src="_images/22654880318f3a7390c181134f7d2a779d73f8f5701040c42673e62160740c06.png" />
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
-</pre></div>
-</div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Reporte de Clasificación:
               precision    recall  f1-score   support
 
@@ -2299,20 +1850,6 @@ Matriz de confusión para Árbol de Decisión:
 </div>
 <img alt="_images/d8740c2dba50fae7a3d2d140b6157748801acb21dd51f393e843dc024f9ee92e.png" src="_images/d8740c2dba50fae7a3d2d140b6157748801acb21dd51f393e843dc024f9ee92e.png" />
 <img alt="_images/e7d8b49eca176c68149fe74df9edbb2e0e3a9dfa303458c03f50f2a9ea3e411a.png" src="_images/e7d8b49eca176c68149fe74df9edbb2e0e3a9dfa303458c03f50f2a9ea3e411a.png" />
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
-</pre></div>
-</div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Reporte de Clasificación:
               precision    recall  f1-score   support
 
@@ -2375,20 +1912,6 @@ Tabla de Métricas:
 2  0.497605  
 3  0.683080  
 4  0.853314  
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
-c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
 </pre></div>
 </div>
 </div>
@@ -39549,97 +39072,57 @@ c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn
 <span class="kn">from</span><span class="w"> </span><span class="nn">collections</span><span class="w"> </span><span class="kn">import</span> <span class="n">Counter</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
 
-<span class="k">class</span><span class="w"> </span><span class="nc">PokerFeatureExtractor</span><span class="p">(</span><span class="n">BaseEstimator</span><span class="p">,</span> <span class="n">TransformerMixin</span><span class="p">):</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">PokerFeatureExtractorSimplificado</span><span class="p">(</span><span class="n">BaseEstimator</span><span class="p">,</span> <span class="n">TransformerMixin</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Transforma las características brutas de las cartas de póquer en características</span>
-<span class="sd">    de alto nivel que capturan la estructura de las manos de póquer.</span>
+<span class="sd">    Transforma las características brutas de cartas de póquer en representaciones estadísticas </span>
+<span class="sd">    generales (sin codificar directamente las clases de manos).</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">pass</span>
-        
+    
     <span class="k">def</span><span class="w"> </span><span class="nf">fit</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
         <span class="k">return</span> <span class="bp">self</span>
     
     <span class="k">def</span><span class="w"> </span><span class="nf">transform</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">X</span><span class="p">):</span>
-        <span class="c1"># Asumimos que X tiene 10 columnas: S1, C1, S2, C2, S3, C3, S4, C4, S5, C5</span>
-        <span class="c1"># donde S es el palo (1-4) y C es el rango (1-13)</span>
-        
-        <span class="c1"># Crear un DataFrame para facilitar el manejo</span>
+        <span class="c1"># Asegurar formato DataFrame</span>
         <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">):</span>
             <span class="n">df</span> <span class="o">=</span> <span class="n">X</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;S1&#39;</span><span class="p">,</span> <span class="s1">&#39;C1&#39;</span><span class="p">,</span> <span class="s1">&#39;S2&#39;</span><span class="p">,</span> <span class="s1">&#39;C2&#39;</span><span class="p">,</span> <span class="s1">&#39;S3&#39;</span><span class="p">,</span> <span class="s1">&#39;C3&#39;</span><span class="p">,</span> <span class="s1">&#39;S4&#39;</span><span class="p">,</span> <span class="s1">&#39;C4&#39;</span><span class="p">,</span> <span class="s1">&#39;S5&#39;</span><span class="p">,</span> <span class="s1">&#39;C5&#39;</span><span class="p">])</span>
         
-        <span class="c1"># Inicializar DataFrame para las nuevas características</span>
         <span class="n">features</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="n">df</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>
-        
-        <span class="c1"># Extraer rangos y palos</span>
+
+        <span class="c1"># Extraer palos y rangos</span>
         <span class="n">suits</span> <span class="o">=</span> <span class="n">df</span><span class="p">[[</span><span class="s1">&#39;S1&#39;</span><span class="p">,</span> <span class="s1">&#39;S2&#39;</span><span class="p">,</span> <span class="s1">&#39;S3&#39;</span><span class="p">,</span> <span class="s1">&#39;S4&#39;</span><span class="p">,</span> <span class="s1">&#39;S5&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">values</span>
         <span class="n">ranks</span> <span class="o">=</span> <span class="n">df</span><span class="p">[[</span><span class="s1">&#39;C1&#39;</span><span class="p">,</span> <span class="s1">&#39;C2&#39;</span><span class="p">,</span> <span class="s1">&#39;C3&#39;</span><span class="p">,</span> <span class="s1">&#39;C4&#39;</span><span class="p">,</span> <span class="s1">&#39;C5&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">values</span>
+
+        <span class="c1"># === Características estadísticas generales ===</span>
+        <span class="k">def</span><span class="w"> </span><span class="nf">rank_features</span><span class="p">(</span><span class="n">hand</span><span class="p">):</span>
+            <span class="n">counts</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">(</span><span class="n">hand</span><span class="p">)</span>
+            <span class="n">freq</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">counts</span><span class="o">.</span><span class="n">values</span><span class="p">(),</span> <span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>  <span class="c1"># e.g. [2,2,1] para dos pares</span>
+            <span class="n">unique_count</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">hand</span><span class="p">))</span>
+            <span class="n">max_count</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">freq</span><span class="p">)</span>
+            <span class="n">std</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">hand</span><span class="p">)</span>
+            <span class="k">return</span> <span class="p">[</span><span class="n">unique_count</span><span class="p">,</span> <span class="n">max_count</span><span class="p">,</span> <span class="n">std</span><span class="p">]</span>
+
+        <span class="k">def</span><span class="w"> </span><span class="nf">suit_features</span><span class="p">(</span><span class="n">hand</span><span class="p">):</span>
+            <span class="k">return</span> <span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">hand</span><span class="p">))]</span>  <span class="c1"># cuántos palos distintos hay</span>
+
+        <span class="c1"># Aplicar las funciones a cada mano</span>
+        <span class="n">rank_feats</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">rank_features</span><span class="p">(</span><span class="n">r</span><span class="p">)</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">ranks</span><span class="p">])</span>
+        <span class="n">suit_feats</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">suit_features</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">suits</span><span class="p">])</span>
         
-        <span class="c1"># 1. Número de pares</span>
-        <span class="k">def</span><span class="w"> </span><span class="nf">count_pairs</span><span class="p">(</span><span class="n">hand_ranks</span><span class="p">):</span>
-            <span class="n">counts</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">(</span><span class="n">hand_ranks</span><span class="p">)</span>
-            <span class="k">return</span> <span class="nb">sum</span><span class="p">(</span><span class="mi">1</span> <span class="k">for</span> <span class="n">count</span> <span class="ow">in</span> <span class="n">counts</span><span class="o">.</span><span class="n">values</span><span class="p">()</span> <span class="k">if</span> <span class="n">count</span> <span class="o">==</span> <span class="mi">2</span><span class="p">)</span>
-        
-        <span class="n">features</span><span class="p">[</span><span class="s1">&#39;pair_count&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">count_pairs</span><span class="p">(</span><span class="n">hand</span><span class="p">)</span> <span class="k">for</span> <span class="n">hand</span> <span class="ow">in</span> <span class="n">ranks</span><span class="p">]</span>
-        
-        <span class="c1"># 2. Presencia de terna (tres del mismo rango)</span>
-        <span class="k">def</span><span class="w"> </span><span class="nf">has_three_of_a_kind</span><span class="p">(</span><span class="n">hand_ranks</span><span class="p">):</span>
-            <span class="n">counts</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">(</span><span class="n">hand_ranks</span><span class="p">)</span>
-            <span class="k">return</span> <span class="mi">1</span> <span class="k">if</span> <span class="mi">3</span> <span class="ow">in</span> <span class="n">counts</span><span class="o">.</span><span class="n">values</span><span class="p">()</span> <span class="k">else</span> <span class="mi">0</span>
-        
-        <span class="n">features</span><span class="p">[</span><span class="s1">&#39;has_three&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">has_three_of_a_kind</span><span class="p">(</span><span class="n">hand</span><span class="p">)</span> <span class="k">for</span> <span class="n">hand</span> <span class="ow">in</span> <span class="n">ranks</span><span class="p">]</span>
-        
-        <span class="c1"># 3. Presencia de cuarteta (cuatro del mismo rango)</span>
-        <span class="k">def</span><span class="w"> </span><span class="nf">has_four_of_a_kind</span><span class="p">(</span><span class="n">hand_ranks</span><span class="p">):</span>
-            <span class="n">counts</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">(</span><span class="n">hand_ranks</span><span class="p">)</span>
-            <span class="k">return</span> <span class="mi">1</span> <span class="k">if</span> <span class="mi">4</span> <span class="ow">in</span> <span class="n">counts</span><span class="o">.</span><span class="n">values</span><span class="p">()</span> <span class="k">else</span> <span class="mi">0</span>
-        
-        <span class="n">features</span><span class="p">[</span><span class="s1">&#39;has_four&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">has_four_of_a_kind</span><span class="p">(</span><span class="n">hand</span><span class="p">)</span> <span class="k">for</span> <span class="n">hand</span> <span class="ow">in</span> <span class="n">ranks</span><span class="p">]</span>
-        
-        <span class="c1"># 4. ¿Escalera? (secuencia de 5 rangos consecutivos)</span>
-        <span class="k">def</span><span class="w"> </span><span class="nf">is_straight</span><span class="p">(</span><span class="n">hand_ranks</span><span class="p">):</span>
-            <span class="c1"># Manejo especial para As (puede ser bajo en A-2-3-4-5 o alto en 10-J-Q-K-A)</span>
-            <span class="n">sorted_ranks</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">hand_ranks</span><span class="p">)</span>
-            
-            <span class="c1"># Verificar escalera normal</span>
-            <span class="k">if</span> <span class="n">sorted_ranks</span> <span class="o">==</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="nb">min</span><span class="p">(</span><span class="n">sorted_ranks</span><span class="p">),</span> <span class="nb">max</span><span class="p">(</span><span class="n">sorted_ranks</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)):</span>
-                <span class="k">return</span> <span class="mi">1</span>
-            
-            <span class="c1"># Verificar caso especial A-2-3-4-5 (donde As es bajo)</span>
-            <span class="k">if</span> <span class="mi">1</span> <span class="ow">in</span> <span class="n">sorted_ranks</span><span class="p">:</span>  <span class="c1"># As presente</span>
-                <span class="c1"># Reemplazar As-alto (1) con As-bajo (14) y verificar otra vez</span>
-                <span class="n">alt_ranks</span> <span class="o">=</span> <span class="p">[</span><span class="n">r</span> <span class="k">if</span> <span class="n">r</span> <span class="o">!=</span> <span class="mi">1</span> <span class="k">else</span> <span class="mi">14</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">sorted_ranks</span><span class="p">]</span>
-                <span class="n">alt_ranks</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
-                <span class="k">if</span> <span class="n">alt_ranks</span> <span class="o">==</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="nb">min</span><span class="p">(</span><span class="n">alt_ranks</span><span class="p">),</span> <span class="nb">max</span><span class="p">(</span><span class="n">alt_ranks</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)):</span>
-                    <span class="k">return</span> <span class="mi">1</span>
-            
-            <span class="k">return</span> <span class="mi">0</span>
-        
-        <span class="n">features</span><span class="p">[</span><span class="s1">&#39;is_straight&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">is_straight</span><span class="p">(</span><span class="n">hand</span><span class="p">)</span> <span class="k">for</span> <span class="n">hand</span> <span class="ow">in</span> <span class="n">ranks</span><span class="p">]</span>
-        
-        <span class="c1"># 5. ¿Color? (todas las cartas del mismo palo)</span>
-        <span class="k">def</span><span class="w"> </span><span class="nf">is_flush</span><span class="p">(</span><span class="n">hand_suits</span><span class="p">):</span>
-            <span class="k">return</span> <span class="mi">1</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">hand_suits</span><span class="p">))</span> <span class="o">==</span> <span class="mi">1</span> <span class="k">else</span> <span class="mi">0</span>
-        
-        <span class="n">features</span><span class="p">[</span><span class="s1">&#39;is_flush&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">is_flush</span><span class="p">(</span><span class="n">hand</span><span class="p">)</span> <span class="k">for</span> <span class="n">hand</span> <span class="ow">in</span> <span class="n">suits</span><span class="p">]</span>
-        
-        <span class="c1"># 6. Característica combinada: ¿Es posible full house?</span>
-        <span class="n">features</span><span class="p">[</span><span class="s1">&#39;possible_full_house&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">features</span><span class="p">[</span><span class="s1">&#39;has_three&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">features</span><span class="p">[</span><span class="s1">&#39;pair_count&#39;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">1</span><span class="p">)</span>
-        
-        <span class="c1"># 7. Característica combinada: ¿Es posible escalera color?</span>
-        <span class="n">features</span><span class="p">[</span><span class="s1">&#39;possible_straight_flush&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">features</span><span class="p">[</span><span class="s1">&#39;is_straight&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">features</span><span class="p">[</span><span class="s1">&#39;is_flush&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span>
-        
-        <span class="c1"># 8. Característica combinada: ¿Posible escalera real?</span>
         <span class="k">def</span><span class="w"> </span><span class="nf">is_royal</span><span class="p">(</span><span class="n">hand_ranks</span><span class="p">):</span>
             <span class="k">return</span> <span class="mi">1</span> <span class="k">if</span> <span class="nb">set</span><span class="p">(</span><span class="n">hand_ranks</span><span class="p">)</span> <span class="o">==</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">13</span><span class="p">}</span> <span class="k">else</span> <span class="mi">0</span>
-        
         <span class="n">features</span><span class="p">[</span><span class="s1">&#39;is_royal&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">is_royal</span><span class="p">(</span><span class="n">hand</span><span class="p">)</span> <span class="k">for</span> <span class="n">hand</span> <span class="ow">in</span> <span class="n">ranks</span><span class="p">]</span>
-        <span class="n">features</span><span class="p">[</span><span class="s1">&#39;possible_royal_flush&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">features</span><span class="p">[</span><span class="s1">&#39;is_royal&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">features</span><span class="p">[</span><span class="s1">&#39;is_flush&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span>
         
-        <span class="c1"># Mantener también las características originales</span>
-        <span class="c1"># Esto permite que el modelo aprenda tanto de las características brutas como de las transformadas</span>
+        <span class="c1"># Cargar al dataframe</span>
+        <span class="n">features</span><span class="p">[</span><span class="s1">&#39;unique_ranks&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">rank_feats</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span>
+        <span class="n">features</span><span class="p">[</span><span class="s1">&#39;rank_std&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">rank_feats</span><span class="p">[:,</span> <span class="mi">2</span><span class="p">]</span>
+        <span class="n">features</span><span class="p">[</span><span class="s1">&#39;unique_suits&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">suit_feats</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span>
+        <span class="n">features</span><span class="p">[</span><span class="s1">&#39;possible_royal_flush&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">features</span><span class="p">[</span><span class="s1">&#39;is_royal&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">features</span><span class="p">[</span><span class="s1">&#39;unique_suits&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span>
+
+        <span class="c1"># Incluir las características crudas (palos y valores)</span>
         <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="p">:</span>
             <span class="n">features</span><span class="p">[</span><span class="n">col</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">col</span><span class="p">]</span>
         
@@ -39783,7 +39266,7 @@ c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn
 <span class="k">def</span><span class="w"> </span><span class="nf">build_poker_classifier</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">X_test</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">y_test</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
     <span class="c1"># Pipeline para el modelo en cascada con XGBoost y feature engineering</span>
     <span class="n">cascade_pipeline</span> <span class="o">=</span> <span class="n">Pipeline</span><span class="p">([</span>
-        <span class="p">(</span><span class="s1">&#39;features&#39;</span><span class="p">,</span> <span class="n">PokerFeatureExtractor</span><span class="p">()),</span>
+        <span class="p">(</span><span class="s1">&#39;features&#39;</span><span class="p">,</span> <span class="n">PokerFeatureExtractorSimplificado</span><span class="p">()),</span>
         <span class="p">(</span><span class="s1">&#39;classifier&#39;</span><span class="p">,</span> <span class="n">PokerHandCascadeClassifier</span><span class="p">(</span>
             <span class="n">base_classifier</span><span class="o">=</span><span class="n">XGBClassifier</span><span class="p">(</span>
                 <span class="n">n_estimators</span><span class="o">=</span><span class="mi">125</span><span class="p">,</span>
@@ -39885,61 +39368,33 @@ c:\Users\f1714\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Entrenando Cascade Classifier...
-
-Evaluando modelo en conjunto de prueba:
-Cascade Classifier: F1-Score = 1.0000, AUC = 1.0000
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Evaluando modelo en conjunto de prueba:
+Cascade Classifier: F1-Score = 0.9351, AUC = 0.9998
 
 Reporte de clasificación para el Cascade Classifier:
               precision    recall  f1-score   support
 
            0       1.00      1.00      1.00     12493
            1       1.00      1.00      1.00     10599
-           2       1.00      1.00      1.00      1206
-           3       1.00      1.00      1.00       513
+           2       0.88      0.99      0.93      1206
+           3       0.96      0.69      0.81       513
            4       1.00      1.00      1.00        93
            5       1.00      1.00      1.00        54
-           6       1.00      1.00      1.00        36
-           7       1.00      1.00      1.00         6
+           6       0.94      0.94      0.94        36
+           7       0.67      0.67      0.67         6
            8       1.00      1.00      1.00         5
            9       1.00      1.00      1.00         5
 
-    accuracy                           1.00     25010
-   macro avg       1.00      1.00      1.00     25010
-weighted avg       1.00      1.00      1.00     25010
+    accuracy                           0.99     25010
+   macro avg       0.95      0.93      0.94     25010
+weighted avg       0.99      0.99      0.99     25010
 </pre></div>
 </div>
-<img alt="_images/b1b7077c5dbd5a5d793d52f9f9737face6d57c05e6bf33c641719dc5ff20dcf7.png" src="_images/b1b7077c5dbd5a5d793d52f9f9737face6d57c05e6bf33c641719dc5ff20dcf7.png" />
-<img alt="_images/a101ce3c8d28b79911c7c336c2305c299a4c5f340cb37cc5d243a4971f6e1fd8.png" src="_images/a101ce3c8d28b79911c7c336c2305c299a4c5f340cb37cc5d243a4971f6e1fd8.png" />
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Tiempo de cómputo: 31.7200 segundos
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nueva_instancia</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">([[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">13</span><span class="p">]],</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;S1&quot;</span><span class="p">,</span> <span class="s2">&quot;C1&quot;</span><span class="p">,</span> <span class="s2">&quot;S2&quot;</span><span class="p">,</span> <span class="s2">&quot;C2&quot;</span><span class="p">,</span> <span class="s2">&quot;S3&quot;</span><span class="p">,</span> <span class="s2">&quot;C3&quot;</span><span class="p">,</span> <span class="s2">&quot;S4&quot;</span><span class="p">,</span> <span class="s2">&quot;C4&quot;</span><span class="p">,</span> <span class="s2">&quot;S5&quot;</span><span class="p">,</span> <span class="s2">&quot;C5&quot;</span><span class="p">])</span>
-
-<span class="n">prediccion</span> <span class="o">=</span> <span class="n">cascade_model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">nueva_instancia</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
-
-<span class="n">diccionario</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="mi">0</span><span class="p">:</span> <span class="s2">&quot;Carta alta&quot;</span><span class="p">,</span>
-    <span class="mi">1</span><span class="p">:</span> <span class="s2">&quot;Una par&quot;</span><span class="p">,</span>
-    <span class="mi">2</span><span class="p">:</span> <span class="s2">&quot;Dos pares&quot;</span><span class="p">,</span>
-    <span class="mi">3</span><span class="p">:</span> <span class="s2">&quot;Trío&quot;</span><span class="p">,</span>
-    <span class="mi">4</span><span class="p">:</span> <span class="s2">&quot;Escalera&quot;</span><span class="p">,</span>
-    <span class="mi">5</span><span class="p">:</span> <span class="s2">&quot;Color&quot;</span><span class="p">,</span>
-    <span class="mi">6</span><span class="p">:</span> <span class="s2">&quot;Full house&quot;</span><span class="p">,</span>
-    <span class="mi">7</span><span class="p">:</span> <span class="s2">&quot;Póquer&quot;</span><span class="p">,</span>
-    <span class="mi">8</span><span class="p">:</span> <span class="s2">&quot;Escalera color&quot;</span><span class="p">,</span>
-    <span class="mi">9</span><span class="p">:</span> <span class="s2">&quot;Escalera real&quot;</span>
-<span class="p">}</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;La predicción para la nueva instancia es la clase: </span><span class="si">{</span><span class="n">prediccion</span><span class="si">}</span><span class="s2">, </span><span class="si">{</span><span class="n">diccionario</span><span class="p">[</span><span class="n">prediccion</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>La predicción para la nueva instancia es la clase: 5, Color
+<img alt="_images/b1b4669f360f1c2020ff1c1151b4c62ce74c2fb7b9808ae140df5d6727a2e62a.png" src="_images/b1b4669f360f1c2020ff1c1151b4c62ce74c2fb7b9808ae140df5d6727a2e62a.png" />
+<img alt="_images/3a49b1c9da1e5ac641d71fe0a44ba08228e051cf3939330ab25febabafbc1fc2.png" src="_images/3a49b1c9da1e5ac641d71fe0a44ba08228e051cf3939330ab25febabafbc1fc2.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Tiempo de cómputo: 53.5100 segundos
 </pre></div>
 </div>
 </div>
@@ -40033,6 +39488,198 @@ weighted avg       1.00      1.00      1.00     25010
 </div>
 </div>
 </section>
+<section id="curvas-roc-bosque-aleatorio">
+<h2>Curvas ROC Bosque Aleatorio<a class="headerlink" href="#curvas-roc-bosque-aleatorio" title="Link to this heading">#</a></h2>
+<p>Por defecto</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.metrics</span><span class="w"> </span><span class="kn">import</span> <span class="n">roc_auc_score</span><span class="p">,</span> <span class="n">roc_curve</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.ensemble</span><span class="w"> </span><span class="kn">import</span> <span class="n">RandomForestClassifier</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
+
+<span class="c1"># El archivo &#39;poker-hand-training-true.data&#39; posee 25010 filas y &#39;poker-hand-testing.data&#39; posee un millón.</span>
+<span class="c1"># Por esto, las variables en las que se guardan están invertidas.</span>
+<span class="c1"># Si no se hiciera, se entrenaría con 25 mil instancias y se evaluaría con el millón.</span>
+<span class="n">train_path</span> <span class="o">=</span> <span class="s2">&quot;datosDePoquer/poker-hand-testing.data&quot;</span>
+<span class="n">test_path</span> <span class="o">=</span> <span class="s2">&quot;datosDePoquer/poker-hand-training-true.data&quot;</span>
+
+<span class="n">column_names</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;S1&quot;</span><span class="p">,</span> <span class="s2">&quot;C1&quot;</span><span class="p">,</span> <span class="s2">&quot;S2&quot;</span><span class="p">,</span> <span class="s2">&quot;C2&quot;</span><span class="p">,</span> <span class="s2">&quot;S3&quot;</span><span class="p">,</span> <span class="s2">&quot;C3&quot;</span><span class="p">,</span> <span class="s2">&quot;S4&quot;</span><span class="p">,</span> <span class="s2">&quot;C4&quot;</span><span class="p">,</span> <span class="s2">&quot;S5&quot;</span><span class="p">,</span> <span class="s2">&quot;C5&quot;</span><span class="p">,</span> <span class="s2">&quot;Clase&quot;</span><span class="p">]</span>
+
+<span class="n">df_train</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">train_path</span><span class="p">,</span> <span class="n">names</span><span class="o">=</span><span class="n">column_names</span><span class="p">)</span>
+<span class="n">df_test</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">test_path</span><span class="p">,</span> <span class="n">names</span><span class="o">=</span><span class="n">column_names</span><span class="p">)</span>
+
+<span class="c1"># Variables predictoras (X) y variable objetivo (y)</span>
+<span class="n">X_train</span> <span class="o">=</span> <span class="n">df_train</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Clase&quot;</span><span class="p">])</span>
+<span class="n">y_train</span> <span class="o">=</span> <span class="n">df_train</span><span class="p">[</span><span class="s2">&quot;Clase&quot;</span><span class="p">]</span>
+<span class="n">X_test</span> <span class="o">=</span> <span class="n">df_test</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Clase&quot;</span><span class="p">])</span>
+<span class="n">y_test</span> <span class="o">=</span> <span class="n">df_test</span><span class="p">[</span><span class="s2">&quot;Clase&quot;</span><span class="p">]</span>
+
+<span class="c1"># Implementar modelos benchmark</span>
+<span class="n">models</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;Random Forest&quot;</span><span class="p">:</span> <span class="n">RandomForestClassifier</span><span class="p">()</span>
+<span class="p">}</span>
+
+<span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">model</span> <span class="ow">in</span> <span class="n">models</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="n">start_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+    <span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+    <span class="n">y_pred</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+    <span class="n">y_proba</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict_proba</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+    <span class="n">finish_time</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span> <span class="o">-</span> <span class="n">start_time</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+    
+    <span class="n">test_auc</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="n">roc_auc_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_proba</span><span class="p">,</span> <span class="n">multi_class</span><span class="o">=</span><span class="s1">&#39;ovr&#39;</span><span class="p">),</span> <span class="mi">3</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">:  → AUC en test set = </span><span class="si">{</span><span class="n">test_auc</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Tiempo de cómputo: </span><span class="si">{</span><span class="n">finish_time</span><span class="si">:</span><span class="s1">.4f</span><span class="si">}</span><span class="s1"> segundos&#39;</span><span class="p">)</span>
+
+    <span class="c1"># Graficar curvas ROC multiclase</span>
+    <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">model</span> <span class="ow">in</span> <span class="n">models</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="n">colors</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="s1">&#39;green&#39;</span><span class="p">,</span> <span class="s1">&#39;purple&#39;</span><span class="p">,</span> <span class="s1">&#39;orange&#39;</span><span class="p">,</span> <span class="s1">&#39;brown&#39;</span><span class="p">,</span> <span class="s1">&#39;pink&#39;</span><span class="p">,</span> <span class="s1">&#39;gray&#39;</span><span class="p">,</span> <span class="s1">&#39;olive&#39;</span><span class="p">,</span> <span class="s1">&#39;cyan&#39;</span><span class="p">]</span>
+        
+        <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>  <span class="c1"># Para cada clase</span>
+            <span class="n">fpr</span><span class="p">,</span> <span class="n">tpr</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">roc_curve</span><span class="p">(</span><span class="n">y_test</span> <span class="o">==</span> <span class="n">i</span><span class="p">,</span> <span class="n">y_proba</span><span class="p">[:,</span> <span class="n">i</span><span class="p">])</span>
+            <span class="n">auc_score</span> <span class="o">=</span> <span class="n">roc_auc_score</span><span class="p">(</span><span class="n">y_test</span> <span class="o">==</span> <span class="n">i</span><span class="p">,</span> <span class="n">y_proba</span><span class="p">[:,</span> <span class="n">i</span><span class="p">])</span>
+            <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">fpr</span><span class="p">,</span> <span class="n">tpr</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">colors</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;Clase </span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s1"> (AUC = </span><span class="si">{</span><span class="n">auc_score</span><span class="si">:</span><span class="s1">.2f</span><span class="si">}</span><span class="s1">)&#39;</span><span class="p">)</span>
+        
+        <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Tasa de Falsos Positivos&#39;</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Tasa de Verdaderos Positivos&#39;</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Curvas ROC - </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s1"> (AUC global = </span><span class="si">{</span><span class="n">test_auc</span><span class="si">:</span><span class="s1">.2f</span><span class="si">}</span><span class="s1">)&#39;</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s1">&#39;lower right&#39;</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Random Forest:  → AUC en test set = 0.8780
+Tiempo de cómputo: 343.3800 segundos
+</pre></div>
+</div>
+<img alt="_images/de3dda9de3888e2407429153d4794f53879a3f7fed933e82ad48e409e12ee8e5.png" src="_images/de3dda9de3888e2407429153d4794f53879a3f7fed933e82ad48e409e12ee8e5.png" />
+</div>
+</div>
+<p>SMOTE</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.metrics</span><span class="w"> </span><span class="kn">import</span> <span class="n">roc_auc_score</span><span class="p">,</span> <span class="n">roc_curve</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.ensemble</span><span class="w"> </span><span class="kn">import</span> <span class="n">RandomForestClassifier</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">imblearn.over_sampling</span><span class="w"> </span><span class="kn">import</span> <span class="n">SMOTE</span>
+
+<span class="n">sampling_strategy</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="mi">3</span><span class="p">:</span> <span class="mi">30000</span><span class="p">,</span>   <span class="c1"># Three of a kind</span>
+    <span class="mi">4</span><span class="p">:</span> <span class="mi">20000</span><span class="p">,</span>   <span class="c1"># Straight</span>
+    <span class="mi">5</span><span class="p">:</span> <span class="mi">10000</span><span class="p">,</span>   <span class="c1"># Flush</span>
+    <span class="mi">6</span><span class="p">:</span> <span class="mi">4000</span><span class="p">,</span>    <span class="c1"># Full house</span>
+    <span class="mi">7</span><span class="p">:</span> <span class="mi">4000</span><span class="p">,</span>    <span class="c1"># Four of a kind</span>
+    <span class="mi">8</span><span class="p">:</span> <span class="mi">4000</span><span class="p">,</span>    <span class="c1"># Straight flush</span>
+    <span class="mi">9</span><span class="p">:</span> <span class="mi">4000</span>     <span class="c1"># Royal flush</span>
+<span class="p">}</span>
+
+<span class="n">smote</span> <span class="o">=</span> <span class="n">SMOTE</span><span class="p">(</span><span class="n">sampling_strategy</span><span class="o">=</span><span class="n">sampling_strategy</span><span class="p">,</span> <span class="n">k_neighbors</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+<span class="n">X_train_res</span><span class="p">,</span> <span class="n">y_train_res</span> <span class="o">=</span> <span class="n">smote</span><span class="o">.</span><span class="n">fit_resample</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+
+<span class="c1"># Implementar modelos benchmark</span>
+<span class="n">models</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;Random_Forest_SMOTE&quot;</span><span class="p">:</span> <span class="n">RandomForestClassifier</span><span class="p">(</span><span class="n">max_depth</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">n_estimators</span><span class="o">=</span><span class="mi">75</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">model</span> <span class="ow">in</span> <span class="n">models</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="n">start_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+    <span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train_res</span><span class="p">,</span> <span class="n">y_train_res</span><span class="p">)</span>
+    <span class="n">y_pred</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+    <span class="n">y_proba</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict_proba</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+    <span class="n">finish_time</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span> <span class="o">-</span> <span class="n">start_time</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+    
+    <span class="n">test_auc</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="n">roc_auc_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_proba</span><span class="p">,</span> <span class="n">multi_class</span><span class="o">=</span><span class="s1">&#39;ovr&#39;</span><span class="p">),</span> <span class="mi">3</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">:  → AUC en test set = </span><span class="si">{</span><span class="n">test_auc</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Tiempo de cómputo: </span><span class="si">{</span><span class="n">finish_time</span><span class="si">:</span><span class="s1">.4f</span><span class="si">}</span><span class="s1"> segundos&#39;</span><span class="p">)</span>
+
+    <span class="c1"># Graficar curvas ROC multiclase</span>
+    <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">model</span> <span class="ow">in</span> <span class="n">models</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="n">colors</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="s1">&#39;green&#39;</span><span class="p">,</span> <span class="s1">&#39;purple&#39;</span><span class="p">,</span> <span class="s1">&#39;orange&#39;</span><span class="p">,</span> <span class="s1">&#39;brown&#39;</span><span class="p">,</span> <span class="s1">&#39;pink&#39;</span><span class="p">,</span> <span class="s1">&#39;gray&#39;</span><span class="p">,</span> <span class="s1">&#39;olive&#39;</span><span class="p">,</span> <span class="s1">&#39;cyan&#39;</span><span class="p">]</span>
+        
+        <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>  <span class="c1"># Para cada clase</span>
+            <span class="n">fpr</span><span class="p">,</span> <span class="n">tpr</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">roc_curve</span><span class="p">(</span><span class="n">y_test</span> <span class="o">==</span> <span class="n">i</span><span class="p">,</span> <span class="n">y_proba</span><span class="p">[:,</span> <span class="n">i</span><span class="p">])</span>
+            <span class="n">auc_score</span> <span class="o">=</span> <span class="n">roc_auc_score</span><span class="p">(</span><span class="n">y_test</span> <span class="o">==</span> <span class="n">i</span><span class="p">,</span> <span class="n">y_proba</span><span class="p">[:,</span> <span class="n">i</span><span class="p">])</span>
+            <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">fpr</span><span class="p">,</span> <span class="n">tpr</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">colors</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;Clase </span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s1"> (AUC = </span><span class="si">{</span><span class="n">auc_score</span><span class="si">:</span><span class="s1">.2f</span><span class="si">}</span><span class="s1">)&#39;</span><span class="p">)</span>
+        
+        <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Tasa de Falsos Positivos&#39;</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Tasa de Verdaderos Positivos&#39;</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Curvas ROC - </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s1"> (AUC global = </span><span class="si">{</span><span class="n">test_auc</span><span class="si">:</span><span class="s1">.2f</span><span class="si">}</span><span class="s1">)&#39;</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s1">&#39;lower right&#39;</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Random_Forest_SMOTE:  → AUC en test set = 0.8530
+Tiempo de cómputo: 178.5000 segundos
+</pre></div>
+</div>
+<img alt="_images/f3983f0678abbd17daa467ccb06fe76cf8f3beac99d7449f5397d6dd193053bf.png" src="_images/f3983f0678abbd17daa467ccb06fe76cf8f3beac99d7449f5397d6dd193053bf.png" />
+</div>
+</div>
+<p>ADASYN</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.metrics</span><span class="w"> </span><span class="kn">import</span> <span class="n">roc_auc_score</span><span class="p">,</span> <span class="n">roc_curve</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.ensemble</span><span class="w"> </span><span class="kn">import</span> <span class="n">RandomForestClassifier</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">imblearn.over_sampling</span><span class="w"> </span><span class="kn">import</span> <span class="n">ADASYN</span>
+
+<span class="n">smote</span> <span class="o">=</span> <span class="n">ADASYN</span><span class="p">(</span><span class="n">sampling_strategy</span><span class="o">=</span><span class="s1">&#39;minority&#39;</span><span class="p">,</span> <span class="n">n_neighbors</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+<span class="n">X_train_res</span><span class="p">,</span> <span class="n">y_train_res</span> <span class="o">=</span> <span class="n">smote</span><span class="o">.</span><span class="n">fit_resample</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+
+<span class="c1"># Implementar modelos benchmark</span>
+<span class="n">models</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;Random_Forest_ADASYN&quot;</span><span class="p">:</span> <span class="n">RandomForestClassifier</span><span class="p">(</span><span class="n">max_depth</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">n_estimators</span><span class="o">=</span><span class="mi">75</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">model</span> <span class="ow">in</span> <span class="n">models</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="n">start_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+    <span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train_res</span><span class="p">,</span> <span class="n">y_train_res</span><span class="p">)</span>
+    <span class="n">y_pred</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+    <span class="n">y_proba</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict_proba</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+    <span class="n">finish_time</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span> <span class="o">-</span> <span class="n">start_time</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+    
+    <span class="n">test_auc</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="n">roc_auc_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_proba</span><span class="p">,</span> <span class="n">multi_class</span><span class="o">=</span><span class="s1">&#39;ovr&#39;</span><span class="p">),</span> <span class="mi">3</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">:  → AUC en test set = </span><span class="si">{</span><span class="n">test_auc</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Tiempo de cómputo: </span><span class="si">{</span><span class="n">finish_time</span><span class="si">:</span><span class="s1">.4f</span><span class="si">}</span><span class="s1"> segundos&#39;</span><span class="p">)</span>
+
+    <span class="c1"># Graficar curvas ROC multiclase</span>
+    <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">model</span> <span class="ow">in</span> <span class="n">models</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="n">colors</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="s1">&#39;green&#39;</span><span class="p">,</span> <span class="s1">&#39;purple&#39;</span><span class="p">,</span> <span class="s1">&#39;orange&#39;</span><span class="p">,</span> <span class="s1">&#39;brown&#39;</span><span class="p">,</span> <span class="s1">&#39;pink&#39;</span><span class="p">,</span> <span class="s1">&#39;gray&#39;</span><span class="p">,</span> <span class="s1">&#39;olive&#39;</span><span class="p">,</span> <span class="s1">&#39;cyan&#39;</span><span class="p">]</span>
+        
+        <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>  <span class="c1"># Para cada clase</span>
+            <span class="n">fpr</span><span class="p">,</span> <span class="n">tpr</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">roc_curve</span><span class="p">(</span><span class="n">y_test</span> <span class="o">==</span> <span class="n">i</span><span class="p">,</span> <span class="n">y_proba</span><span class="p">[:,</span> <span class="n">i</span><span class="p">])</span>
+            <span class="n">auc_score</span> <span class="o">=</span> <span class="n">roc_auc_score</span><span class="p">(</span><span class="n">y_test</span> <span class="o">==</span> <span class="n">i</span><span class="p">,</span> <span class="n">y_proba</span><span class="p">[:,</span> <span class="n">i</span><span class="p">])</span>
+            <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">fpr</span><span class="p">,</span> <span class="n">tpr</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">colors</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;Clase </span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s1"> (AUC = </span><span class="si">{</span><span class="n">auc_score</span><span class="si">:</span><span class="s1">.2f</span><span class="si">}</span><span class="s1">)&#39;</span><span class="p">)</span>
+        
+        <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Tasa de Falsos Positivos&#39;</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Tasa de Verdaderos Positivos&#39;</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Curvas ROC - </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s1"> (AUC global = </span><span class="si">{</span><span class="n">test_auc</span><span class="si">:</span><span class="s1">.2f</span><span class="si">}</span><span class="s1">)&#39;</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s1">&#39;lower right&#39;</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Random_Forest_ADASYN:  → AUC en test set = 0.8830
+Tiempo de cómputo: 218.8300 segundos
+</pre></div>
+</div>
+<img alt="_images/4f759a320175709ddd388de7f8438506ace24b8f8e35d15232a817562654c84d.png" src="_images/4f759a320175709ddd388de7f8438506ace24b8f8e35d15232a817562654c84d.png" />
+</div>
+</div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -40097,7 +39744,9 @@ weighted avg       1.00      1.00      1.00     25010
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#class-weight-balanced">‘class_weight=balanced’</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lime">Lime</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modelo-original">Modelo original</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#verificacion-de-no-sobreajuste">Verificación de no sobreajuste</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#curvas-roc-faltantes">Curvas ROC faltantes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#curvas-roc-bosque-aleatorio">Curvas ROC Bosque Aleatorio</a></li>
 </ul>
   </nav></div>
 
